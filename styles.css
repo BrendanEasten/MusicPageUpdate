@@ -1,0 +1,265 @@
+
+body {
+  font-family: "Exo", sans-serif;
+  padding: 0;
+    background: linear-gradient(120deg, #00040e, #000000);
+    color: white;
+    margin: 0 auto;
+    
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #000000;
+    color: white;
+  }
+ 
+  header h1 {
+    font-size: 4.3rem;
+    color: #9ce6ff;
+    font-family: "Audiowide", serif;
+
+    
+  }
+
+  #recommendations {
+    display: flex;
+    flex-wrap: wrap; /* Wrap cards to next row if necessary */
+    gap: 16px; /* Add space between cards */
+    justify-content: center; /* Center-align the cards */
+    margin-top: 20px; /* Add spacing at the top */
+  }
+  
+  .info-container {
+    order: 2; 
+    flex: 1; 
+    margin-left: 80px; 
+  }
+  
+  .image-container {
+    display: flex; 
+    flex-direction: column; 
+    position: relative;
+    width: 350px; 
+    height: 350px; 
+    overflow: hidden;
+    border-radius: 20px; 
+    box-shadow: 0 4px 20px rgba(144, 104, 255, 0.6), 0 0 15px rgba(78, 214, 255, 0.8); 
+
+  }
+  /* Hide all images by default */
+.image-container .album-cover {
+  display: none;
+  opacity: 0;
+  transition: opacity 3s ease-in-out; /* Add transition for smooth fading */
+}
+
+/* Show the active image */
+.image-container .album-cover.active {
+  display: block;
+  opacity: 1;
+  transition: opacity 3s ease-in-out; /* Add transition for smooth fading */
+
+}
+  .album-cover-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .album-cover {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+.album-cover.active {
+    opacity: 1; 
+  }
+.navbar {
+  margin-top: 1rem; 
+  width: 100%; 
+  display: flex;
+  padding: 1em;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar li {
+  font-size: 1.6rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #89ffb2; 
+}
+
+
+h1.recommendations{ 
+    font-size: 4em;
+    color: #36f57f;
+    font-family: "Audiowide", serif;
+    text-align: center;
+  }
+  .info{
+    font-size: 2.5em;
+    font-weight: 300;
+    color: #9ce6ff;
+    width: 80%;
+  }
+  
+  #loginButton {
+    background: #6cf867;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: "Exo", sans-serif;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  }
+  
+  #loginButton:hover {
+    background-color: #36f57f;
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px rgba(54, 245, 127, 0.6);
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  .Spotify{
+    color: rgb(132, 255, 132);
+  }
+
+  .recommendation-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    
+  }
+/* Individual Card */
+.recommendation-card {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(144, 104, 255, 0.6), 0 0 15px rgba(78, 214, 255, 0.8); 
+  width: 240px; /* Slightly larger card */
+  margin: 20px; /* Space between cards */
+  text-align: center; /* Center the content */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+
+  
+}
+
+.recommendation-card:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 4px 25px rgba(52, 255, 130, 0.6), 0 0 15px rgba(78, 214, 255, 0.8); 
+}
+
+/* Album Cover Image */
+.album-cover {
+  width: 100%; /* Stretch to full card width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  margin-bottom: 15px; /* Space below the image */
+  object-fit: cover; /* Ensure images fill the space without stretching */
+}
+
+/* Track Name */
+.recommendation-card h3 {
+  font-size: 1.5em;
+  color: #9ce6ff;
+  margin: 10px 0;
+  font-family: "Exo", sans-serif;
+  font-weight: 600; /* Slightly bolder text */
+  line-height: 1.4; /* Spacing between lines */
+  
+}
+
+/* Artist Names */
+.recommendation-card p {
+  font-size: 1em;
+  color: #bbb; /* Lighter grey for artist names */
+  margin: 0;
+  font-family: "Exo", sans-serif;
+}
+
+/* Container for the cards */
+#recommendationCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards in the container */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #000000;
+    color: #b3b3b3;
+  }
+
+
+/* General Audio Styling */
+audio {
+  width: 90%; /* Adjust to make it slightly smaller */
+  max-width: 300px; /* Optional: Set a maximum width */
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+/* Remove native controls (for modern browsers) */
+audio::-webkit-media-controls-panel {
+  background: linear-gradient(90deg, #6a0dad, #1e90ff); /* Purple to Blue Gradient */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(30, 215, 96, 0.8); /* Brighter neon effect */
+
+}
+
+audio::-webkit-media-controls-play-button, 
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: #fff; /* White icons and text for contrast */
+  font-size: 12px; /* Make the font smaller */
+
+}
+
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider-container {
+  color: #fff;
+}
+
+/* Add hover effect */
+audio:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+  transition: all 0.3s ease-in-out;
+}
